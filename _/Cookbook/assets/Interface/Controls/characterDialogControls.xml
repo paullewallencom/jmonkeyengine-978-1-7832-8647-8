@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nifty-controls>
+    <controlDefinition name="characterControl">
+        <panel width="100%" childLayout="horizontal">
+            <panel width="312px" height="384px" id="characterImage" childLayout="center">
+            
+                <control name="label" width="80%" id="characterName" valign="bottom" text="" />
+            </panel>
+            <control name="label" width="50%" id="characterDialogText" wrap="true" textHAlign="left"/>
+        </panel>
+        
+    </controlDefinition>
+</nifty-controls>

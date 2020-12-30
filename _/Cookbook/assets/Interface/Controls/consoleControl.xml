@@ -1,0 +1,10 @@
+<nifty-controls>
+    <controlDefinition name="consoleControl">
+        <control id="console" name="nifty-console" lines="10" width="100%" valign="bottom" backgroundColor="#6874" visible="true">
+            <effect>
+                <onShow name="move" mode="fromOffset" offsetY="200" length="300" inherit="true"/>
+                <onHide name="move" mode="toOffset" offsetY="200" length="200" inherit="true"/>
+            </effect>
+        </control>
+    </controlDefinition>
+</nifty-controls>

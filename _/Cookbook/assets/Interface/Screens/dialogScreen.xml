@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nifty xmlns="http://nifty-gui.sourceforge.net/nifty-1.3.xsd" 
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+       xsi:schemaLocation="http://nifty-gui.sourceforge.net/nifty-1.3.xsd http://nifty-gui.sourceforge.net/nifty-1.3.xsd">
+    <useStyles filename="nifty-default-styles.xml" />
+    
+    <useControls filename="nifty-default-controls.xml" />
+    <useControls filename="Interface/Controls/optionsMenu.xml" />
+    <useControls filename="Interface/Controls/characterDialogControls.xml" />
+
+    <screen id="dialogScreen" controller="chapter06.controller.DialogScreenController">
+        <layer id="layer0" backgroundColor="#0000" childLayout="center">
+            <panel id="dialogPanel" childLayout="vertical" visible="false">
+                <panel id="topPanel" height="64px" childLayout="vertical" valign="top" backgroundColor="#500f" visible="false">
+                    <effect>
+                        <onShow name="move" mode="in" direction="up" length="1500" startDelay="1000" inherit="true"/>
+                        <onEndScreen name="move" mode="out" direction="up" length="200"/>
+                    </effect>
+                </panel>
+
+                <panel id="upperPanel" width="80%" valign="top" align="center" childLayout="vertical">
+                    <control name="characterControl" id="character"/>
+                </panel>
+
+                <panel id="lowerPanel" width="80%" height="*" valign="bottom" align="center"  childLayout="vertical" backgroundColor="#0000">
+                    <control id="dialogOptions" name="listBox" vertical="off" horizontal="off" displayItems="3" selection="Single"/>
+                </panel>
+
+                <panel id="bottomPanel" height="128px" width="100%" childLayout="vertical" valign="bottom" backgroundColor="#500f">
+                    <effect>
+                        <onShow name="move" mode="in" direction="down" length="1500" startDelay="1000" inherit="true" />
+                        <onEndScreen name="move" mode="out" direction="down" length="200"/>
+                    </effect>
+                </panel>
+                <effect>
+                    <onShow name="fade" start="#00" end="#ff" length="200" inherit="true"/>
+                    <onEndScreen name="fade" start="#ff" end="#00" length="100" inherit="true"/>
+                </effect>
+            </panel>
+        </layer>
+        
+        <layer id="optionsLayer" childLayout="center" backgroundColor="#0000">
+            <control name="options" id="options" align="center" visible="false"/>
+        </layer>
+    </screen>
+</nifty>

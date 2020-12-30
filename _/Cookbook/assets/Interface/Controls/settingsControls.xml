@@ -1,0 +1,26 @@
+<nifty-controls>
+    
+    <controlDefinition name="settingsControl">
+        <panel childLayout="vertical" width="40%" height="60%" align="center" valign="center" backgroundColor="#333f">
+
+            <control name="keyBindingControl" id="forwardKey"/>
+            
+            <control name="keyBindingControl" id="backwardKey"/>
+            
+            <control name="keyBindingControl" id="leftKey"/>
+            
+            <control name="keyBindingControl" id="rightKey"/>
+            
+        </panel>
+    </controlDefinition>
+    
+    <controlDefinition name="keyBindingControl">
+        <panel childLayout="horizontal" width="80%" height="25px" backgroundColor="#666f" marginLeft="10px" marginRight="10px" marginTop="4px" align="center" >
+            <control name="label" id="#command" width="150px" text=" "/>
+            
+            <panel width="*" />
+            
+            <control name="button" id="#key" width="100px" valign="center"/>
+        </panel>
+    </controlDefinition>
+</nifty-controls>

@@ -1,0 +1,30 @@
+<nifty xmlns="http://nifty-gui.sourceforge.net/nifty-1.3.xsd"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://nifty-gui.sourceforge.net/nifty-1.3.xsd http://nifty-gui.sourceforge.net/nifty-1.3.xsd">
+    <useStyles filename="nifty-default-styles.xml" />
+    
+    <useControls filename="nifty-default-controls.xml" />
+    <useControls filename="Interface/Controls/optionsMenu.xml" />
+    <useControls filename="Interface/Controls/consoleControl.xml" />
+    <useControls filename="Interface/Controls/gameMessageControls.xml" />
+    
+    <!-- message window -->
+    <registerSound id="showWindow" filename="Sound/Effects/Beep.ogg" />
+    
+<screen id="main" controller="chapter06.controller.MainScreenController">
+        <layer id="layer0" childLayout="absolute" backgroundColor="#000f">
+        </layer>
+        
+        <!-- CONSOLE -->
+        <layer id="consoleLayer" childLayout="vertical" backgroundColor="#0000">
+            <panel height="*"/>
+            <control name="messageQueue" id="mq" valign="bottom"/>
+            <control name="consoleControl" valign="bottom"/>
+        </layer>
+        <!-- /CONSOLE -->
+        
+        <layer id="optionsLayer" childLayout="vertical" backgroundColor="#0000">
+            <control name="options" id="options" align="center" visible="false"/>
+        </layer>
+    </screen>
+</nifty>

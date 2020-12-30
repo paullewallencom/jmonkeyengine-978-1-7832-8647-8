@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<nifty-controls>
+
+  <controlDefinition name="mainmenu">
+      
+      <panel id="menu" width="100%" height="30%" childLayout="horizontal"  style="hs-panel-top">
+          <panel width="10%" childLayout="vertical" valign="center">
+              <panel width="10%" childLayout="horizontal">
+                <control name="label" text="${localization.STR_ONLINE_PLAYERS}:"/>
+                <control name="label" id="#onlinePlayers" text=" "/>
+              </panel>
+              <panel width="10%" childLayout="horizontal">
+                <control name="label" text="${localization.STR_GAMES}:"/>
+                <control name="label" id="#gamesLabel" text=" "/>
+              </panel>
+              
+          </panel>
+          
+          <panel width="*"/>
+          <control id="homeButton" name="button" label="${localization.STR_MENU_MISSIONS}" width="*" margin="1px">
+              <interact onClick="gotoMissions()"/>
+          </control>
+          <control id="baseButton" name="button" label="${localization.STR_MENU_BASE}" width="*" margin="1px">
+              <interact onClick="gotoBase()"/>
+          </control>
+          <control id="squadsButton" name="button" label="${localization.STR_MENU_SQUADS}" width="*" margin="1px">
+              <interact onClick="gotoSquads()"/>
+          </control>
+          
+          <control id="storeButton" name="button" label="${localization.STR_MENU_STORE}" width="*" margin="1px" enabled="false">
+              <interact onClick="gotoStore()"/>
+          </control>
+          
+          <control id="listButton" name="button" label="${localization.STR_MENU_LISTS}" width="*" margin="1px" enabled="false">
+              <interact onClick="gotoLists()"/>
+          </control>
+          
+          <control id="optionsButton" name="button" label="${localization.STR_OPTIONS}" width="*" margin="1px" enabled="false">
+              <interact onClick="showOptions()"/>
+          </control>
+          
+          <control id="quitButton" name="button" label="${localization.STR_MENU_QUIT}" width="*" margin="1px" enabled="false">
+              <interact onClick="quit()"/>
+          </control>
+          
+          <panel width="*"/>
+          
+          <control id="helpButton" name="button" label="${localization.STR_MENU_HELP}" width="25px" margin="1px" enabled="false">
+              <interact onClick="help()"/>
+          </control>
+          
+      </panel>
+  </controlDefinition>
+  
+</nifty-controls>

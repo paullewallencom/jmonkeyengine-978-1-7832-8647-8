@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nifty-controls>
+    <controlDefinition name="itemSlot">
+        <control name="droppable" backgroundColor="#fff5" width="64px" height="64px" margin="1px" childLayout="center"/>
+    </controlDefinition>
+  
+    <controlDefinition name="item" >
+        <control name="draggable" backgroundColor="#aaaf" width="64px" height="64px" childLayout="center" valign="top">
+             <text id="#itemLabel" text="" color="#000f" valign="center" width="100%" style="nifty-label"/>
+        </control>
+    </controlDefinition>
+</nifty-controls>

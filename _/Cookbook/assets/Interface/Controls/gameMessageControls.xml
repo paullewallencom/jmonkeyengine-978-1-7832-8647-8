@@ -1,0 +1,38 @@
+<nifty-controls>
+    
+    <controlDefinition name="messageQueue">
+        <panel width="100%" childLayout="horizontal" backgroundColor="#000f">
+            
+        </panel>
+        
+    </controlDefinition>
+    
+    <controlDefinition name="gameMessage" visible="false" visibleToMouse="true" >
+        <panel childLayout="vertical" width="100px" height="75px" backgroundColor="#666f" marginRight="1px">
+            <control name="label" id="#title" width="100%" text="" align="center"/>
+            
+            <control name="label" id="#content" width="100%" text="" wrap="true" align="center"/>
+            
+            <effect>
+                <onShow name="move" mode="fromOffset" offsetX="1500" length="100" inherit="true"/>
+                <onHide name="fade" start="#ff" end="#00" length="100" inherit="true"/>
+            </effect>
+        </panel>
+    </controlDefinition>
+    
+    <!-- Popup window -->
+    <controlDefinition name="messageWindow">
+        <control name="window" title="" width="500px" height="350px">
+            <panel childLayout="vertical" backgroundColor="#888f" width="100%" height="100%">
+                <control name="label" id="#content" width="100%" height="100%" text="" wrap="true"/>
+                
+                <effect>
+                    <onShow name="fade" start="#00" end="#ff" length="100" inherit="true"/>
+                    <onHide name="fade" start="#ff" end="#00" length="100" inherit="true"/>
+                </effect>
+            </panel>
+        </control>
+        
+    </controlDefinition>
+    
+</nifty-controls>

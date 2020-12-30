@@ -1,0 +1,7 @@
+Material My Material : MatDefs/Misc/Unshaded.j3md {
+     MaterialParameters {
+        ColorMap : Models/Banana/banana.png
+     }
+    AdditionalRenderState {
+    }
+}

@@ -1,0 +1,41 @@
+MaterialDef Sun Plane {
+    MaterialParameters {
+        Texture2D LightMap
+        Texture2D ColorMap
+        Vector3 NormalScale
+        Color Color
+        Boolean VertexColor (UseVertexColor)
+        Boolean SeparateTexCoord
+        Float AlphaDiscardThreshold (AlphaTestFallOff)
+        // Texture of the glowing parts of the material
+        Texture2D GlowMap
+        // The glow color of the object
+        Color GlowColor
+    }
+    Technique {
+        VertexShader GLSL100:   Common/MatDefs/Misc/Sky.vert
+        FragmentShader GLSL100: Common/MatDefs/Misc/Unshaded.frag
+
+        RenderState {
+            FaceCull Off
+        }
+
+        WorldParameters {
+            ViewMatrix
+            ProjectionMatrix
+            WorldMatrix
+        }
+
+        Defines {
+            SEPARATE_TEXCOORD : SeparateTexCoord
+            HAS_COLORMAP : ColorMap
+            HAS_LIGHTMAP : LightMap
+            HAS_VERTEXCOLOR : VertexColor
+            HAS_COLOR : Color
+            NUM_BONES : NumberOfBones
+            DISCARD_ALPHA : AlphaDiscardThreshold
+        }
+    }
+    Technique {
+    }
+}
